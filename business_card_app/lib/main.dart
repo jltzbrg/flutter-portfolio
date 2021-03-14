@@ -26,6 +26,25 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Business Card'),
       ),
+      body: Container(
+        alignment: Alignment.center,
+        child: Stack(
+          alignment: Alignment.center,
+          children: [_getCard()],
+        ),
+      ),
+    );
+  }
+
+  // Card
+  Container _getCard() {
+    return Container(
+      width: 350,
+      height: 200,
+      decoration: BoxDecoration(
+        color: Colors.amberAccent,
+        borderRadius: BorderRadius.circular(4.5),
+      ),
     );
   }
 }
